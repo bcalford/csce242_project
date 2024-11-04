@@ -1,0 +1,43 @@
+/* Color Variables */
+
+html {
+    --color-1: #FFA62E;
+    --color-2: #A61713;
+    --color-3: #FFFDD0;
+    --color-4: #CCCCCC;
+    --color-5: #FFFFFF;
+
+}
+
+/* Structure */
+
+body {
+    background-color: var(--color-3);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--color-1);
+    border: 2px solid var(--color-2);
+    border-radius: 5%;
+    font-size: 16px;
+    padding: 10px;
+    font-family: "Berkshire Swash";
+    color: var(--color-3);
+    text-shadow: 2px 2px var(--color-2);
+}
+
+button:hover {
+    text-decoration: underline;
+    background-color: var(--color-4);
+    cursor: pointer;
+}
+
+/* Typography */
+
+body {
+    font-family: "Besley";
+}
