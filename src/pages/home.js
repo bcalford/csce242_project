@@ -1,3 +1,4 @@
+import { Outlet, Link } from "react-router-dom";
 import "./styles.css";
 import "./home.css";
 
@@ -8,8 +9,8 @@ const Home = () => {
             <section id="img-list">
                 <img src="images/img1.jpeg" />
                 <div id="button-list">
-                    <a href="about.html"><button>Who We Are</button></a>
-                    <a href="dishes.html"><button href="dishes.html">Sample Dishes</button></a>
+                    <Link to="./about"><button>Who We Are</button></Link>
+                    <Link to="./dishes"><button href="dishes.html">Sample Dishes</button></Link>
                 </div>
             </section>
             <section id="home-list">
@@ -34,5 +35,7 @@ const Home = () => {
         </>
     )
 };
+
+
 
 export default Home;

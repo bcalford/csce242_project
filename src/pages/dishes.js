@@ -1,5 +1,8 @@
+import Dish from "../components/Dish";
+import { Outlet, Link } from "react-router-dom";
 import "./styles.css";
 import "./dishes.css";
+import "../components/Dish.css";
 
 const Dishes = () => {
     return (
@@ -20,62 +23,72 @@ const Dishes = () => {
                             <a href="#meal7"><li>Meal 7</li></a>
                         </ul>
                         <div id="plans-button-div">
-                            <a href="plans.html"><button id="plans-button">View Plans</button></a>
+                            <Link to="../plans"><button id="plans-button">View Plans</button></Link>
                         </div>
                     </div>
                 </section>
-                <section id="meals-list"></section>
+                <section id="meals-list">
+                    <Dish
+                        name="Beef and Chicken Meatballs with Sun-Dried Tomatoes"
+                        id="meal1"
+                        link="https://ohsnapmacros.com/meatballs-without-eggs/"
+                        image="images/dish1a.jpg"
+                        para1="These meatballs without eggs are juicy, tender and full of flavor. Made with ground chicken, ground beef, breadcrumbs and sun-dried tomatoes, these are the perfect meatballs for fast and delicious weeknight dinners."
+                        para2="Traditional meatballs use eggs as a binding agent, but don't worry with the help of milk and cheese, you'll have great meatballs in no time."
+                    />
+                    <Dish
+                        name="Beef and Chicken Meatballs with Sun-Dried Tomatoes"
+                        id="meal2"
+                        link="https://ohsnapmacros.com/meatballs-without-eggs/"
+                        image="images/dish1a.jpg"
+                        para1="These meatballs without eggs are juicy, tender and full of flavor. Made with ground chicken, ground beef, breadcrumbs and sun-dried tomatoes, these are the perfect meatballs for fast and delicious weeknight dinners."
+                        para2="Traditional meatballs use eggs as a binding agent, but don't worry with the help of milk and cheese, you'll have great meatballs in no time."
+                    />
+                    <Dish
+                        name="Beef and Chicken Meatballs with Sun-Dried Tomatoes"
+                        id="meal3"
+                        link="https://ohsnapmacros.com/meatballs-without-eggs/"
+                        image="images/dish1a.jpg"
+                        para1="These meatballs without eggs are juicy, tender and full of flavor. Made with ground chicken, ground beef, breadcrumbs and sun-dried tomatoes, these are the perfect meatballs for fast and delicious weeknight dinners."
+                        para2="Traditional meatballs use eggs as a binding agent, but don't worry with the help of milk and cheese, you'll have great meatballs in no time."
+                    />
+                    <Dish
+                        name="Beef and Chicken Meatballs with Sun-Dried Tomatoes"
+                        id="meal4"
+                        link="https://ohsnapmacros.com/meatballs-without-eggs/"
+                        image="images/dish1a.jpg"
+                        para1="These meatballs without eggs are juicy, tender and full of flavor. Made with ground chicken, ground beef, breadcrumbs and sun-dried tomatoes, these are the perfect meatballs for fast and delicious weeknight dinners."
+                        para2="Traditional meatballs use eggs as a binding agent, but don't worry with the help of milk and cheese, you'll have great meatballs in no time."
+                    />
+                    <Dish
+                        name="Beef and Chicken Meatballs with Sun-Dried Tomatoes"
+                        id="meal5"
+                        link="https://ohsnapmacros.com/meatballs-without-eggs/"
+                        image="images/dish1a.jpg"
+                        para1="These meatballs without eggs are juicy, tender and full of flavor. Made with ground chicken, ground beef, breadcrumbs and sun-dried tomatoes, these are the perfect meatballs for fast and delicious weeknight dinners."
+                        para2="Traditional meatballs use eggs as a binding agent, but don't worry with the help of milk and cheese, you'll have great meatballs in no time."
+                    />
+                    <Dish
+                        name="Beef and Chicken Meatballs with Sun-Dried Tomatoes"
+                        id="meal6"
+                        link="https://ohsnapmacros.com/meatballs-without-eggs/"
+                        image="images/dish1a.jpg"
+                        para1="These meatballs without eggs are juicy, tender and full of flavor. Made with ground chicken, ground beef, breadcrumbs and sun-dried tomatoes, these are the perfect meatballs for fast and delicious weeknight dinners."
+                        para2="Traditional meatballs use eggs as a binding agent, but don't worry with the help of milk and cheese, you'll have great meatballs in no time."
+                    />
+                    <Dish
+                        name="Beef and Chicken Meatballs with Sun-Dried Tomatoes"
+                        id="meal7"
+                        link="https://ohsnapmacros.com/meatballs-without-eggs/"
+                        image="images/dish1a.jpg"
+                        para1="These meatballs without eggs are juicy, tender and full of flavor. Made with ground chicken, ground beef, breadcrumbs and sun-dried tomatoes, these are the perfect meatballs for fast and delicious weeknight dinners."
+                        para2="Traditional meatballs use eggs as a binding agent, but don't worry with the help of milk and cheese, you'll have great meatballs in no time."
+                    />
+                </section>
             </div>
         </main>
         </>
     )
 };
-
-const getDishes = async() => {
-    try {
-        return (await fetch("https://bcalford.github.io/csce242/projects/part6/dishes.json")).json();
-    } catch(error) {
-        console.log(error);
-    }
-}
-
-const showDishes = async() => {
-    const dishes = await getDishes();
-
-    dishes.forEach((dish)=>{
-        const article = document.createElement("article");
-        article.classList.add("dish");
-        document.getElementById("meals-list").append(article);
-
-        const link = document.createElement("a");
-        link.href = dish.link;
-        article.append(link);
-
-        const title = document.createElement("h2");
-        title.innerHTML = dish.name;
-        link.append(title);
-
-        const line = document.createElement("hr");
-        article.append(line);
-
-        const innerDiv = document.createElement("div");
-        innerDiv.classList.add("dish-content");
-        article.append(innerDiv);
-
-        const image = document.createElement("img");
-        image.src = "./images/" + dish.image1;
-        innerDiv.append(image);
-
-        const p1 = document.createElement("p");
-        p1.innerHTML = dish.description1;
-        innerDiv.append(p1);
-
-        const p2 = document.createElement("p");
-        p2.innerHTML = dish.description2;
-        innerDiv.append(p2);
-    });
-}
-
-showDishes();
 
 export default Dishes;

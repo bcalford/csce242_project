@@ -1,3 +1,4 @@
+import { Outlet, Link } from "react-router-dom";
 import "./styles.css";
 import "./plans.css";
 
@@ -29,8 +30,8 @@ const Plans = () => {
                 </section>
             </div>
             <div id="plans-buttons">
-                <a href="dishes.html"><button>Sample Dishes</button></a>
-                <a href="order.html"><button>Order Now</button></a>
+                <Link to="../dishes"><button>Sample Dishes</button></Link>
+                <Link to="../order"><button>Order Now</button></Link>
             </div>
         </main>
         </>

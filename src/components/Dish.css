@@ -1,0 +1,53 @@
+hr {
+    border: 2px solid var(--color-2);
+}
+
+.dish {
+    border: 2px solid var(--color-2);
+    border-collapse: collapse;
+    border-radius: 5%;
+    margin-bottom: 20px;
+}
+
+.dish:last-of-type {
+    margin-bottom: 0;
+}
+
+.dish h2 {
+    text-align: center;
+    color: var(--color-2);
+    width: 90%;
+    margin: 20px auto;
+    font-family: "Berkshire Swash";
+}
+
+.dish a {
+    text-decoration: none;
+}
+
+.dish a:hover {
+    text-decoration: underline;
+}
+
+.dish-content img {
+    display: block;
+    margin: auto;
+    width: 400px;
+}
+
+.dish-content p {
+    text-align: center;
+    padding: 10px;
+}
+
+@media (min-width: 900px) {
+    .dish {
+        width: 800px;
+        max-width: 55%;
+    }
+
+    .dish-content img {
+        width: 90%;
+        max-width: 550px;
+    }
+}

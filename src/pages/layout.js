@@ -10,21 +10,21 @@ const Layout = () => {
             <hr className="header-line" />
             <nav id="main-nav">
                 <ul id="nav-list">
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="./dishes">Dishes</Link>
-                    </li>
-                    <li>
-                        <Link to="./plans">Plans</Link>
-                    </li>
-                    <li>
-                        <Link to="./order">Order</Link>
-                    </li>
-                    <li>
-                        <Link to="./about">About</Link>
-                    </li>
+                    <Link to="/">
+                        <li>Home</li>
+                    </Link>
+                    <Link to="./dishes">
+                        <li>Dishes</li>
+                    </Link>
+                    <Link to="./plans">
+                        <li>Plans</li>
+                    </Link>
+                    <Link to="./order">
+                        <li>Order</li>
+                    </Link>
+                    <Link to="./about">
+                        <li>About</li>
+                    </Link>
                 </ul>
             </nav>
             <hr className="header-line" />

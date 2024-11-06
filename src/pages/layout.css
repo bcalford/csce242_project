@@ -55,6 +55,10 @@
     text-decoration: none;
 }
 
+#nav-list a:hover {
+    text-decoration: underline;
+}
+
 #nav-list li {
     font-family: "Berkshire Swash";
     list-style-type: none;
